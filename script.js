@@ -95,13 +95,13 @@ rightArrowCat.onclick = () => {
     addBackgroundImageCat()
 }
 
-categoriesChanger.style.backgroundImage = "url('a.png')";
+categoriesChanger.style.backgroundImage = "url('img/a.png')";
 
 function addBackgroundImageCat(){
-    (indexOfCategorie  == 0) ? categoriesChanger.style.backgroundImage = "url('a.png')" :
-    (indexOfCategorie == 1) ? categoriesChanger.style.backgroundImage = "url('g.png')" :
-    (indexOfCategorie == 2) ? categoriesChanger.style.backgroundImage = "url('f.png')" :
-    categoriesChanger.style.backgroundImage = "url('cars.png')" ;
+    (indexOfCategorie  == 0) ? categoriesChanger.style.backgroundImage = "url('img/a.png')" :
+    (indexOfCategorie == 1) ? categoriesChanger.style.backgroundImage = "url('img/g.png')" :
+    (indexOfCategorie == 2) ? categoriesChanger.style.backgroundImage = "url('img/f.png')" :
+    categoriesChanger.style.backgroundImage = "url('img/cars.png')" ;
 }
 addBackgroundImageCat()
 
@@ -178,7 +178,7 @@ randomModeButton.onclick = () => {
     
 }
 //////////////////////////////LANGUAGES////////////////////////////////////////////////////////
-const languages = ['english', 'russian', 'ukrainian']
+const languages = ['english', 'russian']
 let indexOfLanguages = 0
 let currentLanguages = languages[indexOfLanguages]
 
@@ -203,18 +203,20 @@ rightArrowLan.onclick = () => {
 }
 
 function addBackgroundImageLan(){
-    (indexOfLanguages  == 0) ? languagesChanger.style.backgroundImage = "url('gb.png')" :
-    (indexOfLanguages == 1) ? languagesChanger.style.backgroundImage = "url('r.png')" :
-    languagesChanger.style.backgroundImage = "url('ukr.png')" ;
+    if(indexOfLanguages  == 0){
+        languagesChanger.style.backgroundImage = "url('img/gb.png')"
+    }else{
+        languagesChanger.style.backgroundImage = "url('img/r.png')" 
+    }
 }
 /////////////////////////OPTIONS///////////////////////////////////////////////////////////////////////
 let hintScreen;
 
 function addHintImage(mode){
-    (mode == 0) ? hintScreen.style.backgroundImage = "url('a.png')" :
-    (mode == 1) ? hintScreen.style.backgroundImage = "url('g.png')" :
-    (mode == 2) ? hintScreen.style.backgroundImage = "url('f.png')" :
-    hintScreen.style.backgroundImage = "url('cars.png')" ;
+    (mode == 0) ? hintScreen.style.backgroundImage = "url('img/a.png')" :
+    (mode == 1) ? hintScreen.style.backgroundImage = "url('img/g.png')" :
+    (mode == 2) ? hintScreen.style.backgroundImage = "url('img/f.png')" :
+    hintScreen.style.backgroundImage = "url('img/cars.png')" ;
 }
 ///////////////////////HINTS//////////////////////////////////////////////////////////////////////////////
 let quessedLetters = [];
@@ -364,27 +366,27 @@ randomWord = (arr) => {
         let i;
         ((categoriesForRandomMode[randomNumber] === 'Animals') ? () => {
             if(indexOfLanguages === 0){
-                i = arraysEng[0] , hintScreen.style.backgroundImage = "url('a.png')"
+                i = arraysEng[0] , hintScreen.style.backgroundImage = "url('img/a.png')"
             }else if(indexOfLanguages === 1){
-                i = arryasRus[0] , hintScreen.style.backgroungImage = "url('a.png')"
+                i = arryasRus[0] , hintScreen.style.backgroungImage = "url('img/a.png')"
             }} : 
         (categoriesForRandomMode[randomNumber] === 'Geography') ? () => {
             if(indexOfLanguages === 0){
-                i = arraysEng[1], hintScreen.style.backgroundImage = "url('g.png')"
+                i = arraysEng[1], hintScreen.style.backgroundImage = "url('img/g.png')"
             }else if(indexOfLanguages === 1){
-                i = arraysRus[1], hintScreen.style.backgroundImage = "url('g.png')"
+                i = arraysRus[1], hintScreen.style.backgroundImage = "url('img/g.png')"
             }} :
         (categoriesForRandomMode[randomNumber] === 'Football teams') ? () => {
             if(indexOfLanguages === 0){
-                i = arraysEng[2], hintScreen.style.backgroundImage = "url('f.png')"
+                i = arraysEng[2], hintScreen.style.backgroundImage = "url('img/f.png')"
             }else if(indexOfLanguages === 1){
-                i = arraysRus[2], hintScreen.style.backgroundImage = "url('f.png')"
+                i = arraysRus[2], hintScreen.style.backgroundImage = "url('img/f.png')"
             }} :
         () => {
             if(indexOfLanguages === 0){
-                i = arraysEng[3], hintScreen.style.backgroundImage = "url('cars.png')"
+                i = arraysEng[3], hintScreen.style.backgroundImage = "url('img/cars.png')"
             }else if(indexOfLanguages === 1){
-                i = arraysRus[3], hintScreen.style.backgroundImage = "url('cars.png')"
+                i = arraysRus[3], hintScreen.style.backgroundImage = "url('img/cars.png')"
             }}) () ;
 
         word = i[Math.floor(Math.random() * i.length)]

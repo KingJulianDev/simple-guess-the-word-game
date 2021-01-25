@@ -24,8 +24,6 @@ body{
     height: 500px;
     margin: 0 auto;
     border-radius: 30px;
-    /* padding-top: 10px; */
-    /* background-image: url(bg.png); */
 }
 
 .arrow{
@@ -85,11 +83,10 @@ body{
 }
 
 .languages-changer{
-    background-image: url(gb.png);
+    background-image: url(img/gb.png);
 }
 
 .attempts-changer{
-    /* background-image: url(att.png); */
     background-color: #BEAFA0;
     margin-right: 10px;
 }
@@ -101,24 +98,15 @@ body{
     width: 450px;
     height: 150px;
     box-shadow: 0 3px 3px 0 black;
-    /* background-image: url(gb.png); */
 }
 
-/* input.larger{
-    margin: 0;
-    width: 50px;
-    height: 50px;;
-} */
-
-.settings/* , .options */{
+.settings{
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
 
 .attempts-label, .languages-label{
-    /* clear: both; */
-    /* width: 45%; */
     width: auto;
     height: 30px;
     margin: 0 auto;
@@ -150,23 +138,11 @@ body{
     margin: 0 auto;
 }
 
-/* .endless-mode, .random-mode, .feedback{
-    background-color: #f59563;
-    width: 140px;
-    height: 75px;
-    text-align: center;
-    font-size: 25px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding-top: 7px;
-} */
-
 .feedback{
     padding-top: 20px;
     background-color: #BEAFA0;
     box-shadow: 0 3px 3px 0 black;
 }
-
 
 .hidden{
     visibility: hidden;
@@ -228,14 +204,11 @@ body{
 /* ////////////////////////////////////////////////////////////////////// */
 
 .hiddenWord{
-    /* padding-top: 15px; */
-
     width: auto;
     height: 100px;
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-    /* padding-left: inherit; */
 }
 
 .hiddenLetter{
@@ -341,7 +314,7 @@ body{
 }
 
 .header{
-    width: 100%;/* 550px; */
+    width: 100%;
     height: 75px;
     display: flex;
     padding-top: 30px;
@@ -354,15 +327,14 @@ body{
     height: 75px;
     border-radius: 10px;
     background-color: #BEAFA0;
-    /* margin-right: 10px; */
-    background-image: url(a.png);
+    background-image: url(img/a.png);
 }
 
 .refresh{
     width: 100px;
     height: 75px;
     border-radius: 10px;
-    background-image: url(arrow.png);
+    background-image: url(img/arrow.png);
     margin-right: 10px;
     font-size: 25px;
     text-align: center;
@@ -376,7 +348,7 @@ body{
     height: 75px;
     border-radius: 10px;
     background-color: #F1D145;
-    background-image: url(home.png);
+    background-image: url(img/home.png);
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////// */
@@ -395,7 +367,6 @@ body{
     flex-direction: column;
     width: 95px;
     border-radius: 10px;
-    /* margin-right: 10px; */
     margin-bottom: 10px;
 }
 
@@ -448,27 +419,25 @@ body{
 }
 
 .home{
-    background-image: url(home.png);
-    /* background-image: url(homeBig.png); */
+    background-image: url(img/home.png);
 }
 
 .refreshy{
-    background-image: url(arrowtest.png);
+    background-image: url(img/arrowtest.png);
 }
 
 .first-hint{
-    background-image: url(lypatest.png);
+    background-image: url(img/lypatest.png);
 }
 
 .second-hint{
-    background-image: url(lypatarget.png);
+    background-image: url(img/lypatarget.png);
 }
 
 .categories-options{
     width: 700px;
     margin: 0px auto;
     border-radius: 10px;
-    /* background-color: rgb(110,93,75, 0.7); */
 }
 
 ul{
@@ -478,7 +447,6 @@ ul{
     margin: 70px auto;
     background-color: olivedrab;
     padding: 10px 0;
-    /* margin: auto; */
 }
 
 li{
@@ -488,20 +456,18 @@ li{
     text-align: center;
     padding-top: 10px;
     box-sizing: border-box;
-    /* background-color: rgb(190, 175, 160, 0.9); */
     background-color: rgb(197, 10, 10, .7);
     border-radius: 10px;
     margin: 5px auto;
 }
 
 .li-active{
-    /* background-color: rgb(241, 209, 69, 0.9); */
     background-color: rgb(241,209,69,0.7);
     border-radius: 10px;
 }
 
 .li-disabled{
-    background-color: rgb(197, 10, 10) /* rgb(190,175,160, 0.7) */;
+    background-color: rgb(197, 10, 10);
     border-radius: 10px;
 }
 
@@ -538,11 +504,4 @@ li{
     width: 40%;
     border: unset;
     font-size: 25px;
-    /* background-color: #FF8000; */
-    /* height: 100px;
-    width: 500px; */
-    /* border-radius: 10px;
-    font-size: 35px;
-    text-align: center; */
-    /* box-shadow: 0 5px 10px 0 black; */
 }
