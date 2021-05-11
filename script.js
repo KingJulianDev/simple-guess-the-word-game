@@ -582,9 +582,9 @@ window.onclick = (event) => {
     modal.classList.remove('modal-active')
   }
 }
-let leftArrowCat = document.querySelector('.l-arrow-categories')
-let rightArrowCat = document.querySelector('.r-arrow-categories')
-let categoriesChanger = document.querySelector('.categories-changer')
+const leftArrowCat = document.querySelector('.l-arrow-categories')
+const rightArrowCat = document.querySelector('.r-arrow-categories')
+const categoriesChanger = document.querySelector('.categories-changer')
 leftArrowCat.onclick = () => {
   indexOfCategorie--
   if (indexOfCategorie < 0) {
@@ -694,9 +694,9 @@ const languages = ['english', 'russian']
 let indexOfLanguages = 0
 let currentLanguages = languages[indexOfLanguages]
 
-let leftArrowLan = document.querySelector('.l-arrow-languages')
-let rightArrowLan = document.querySelector('.r-arrow-languages')
-let languagesChanger = document.querySelector('.languages-changer')
+const leftArrowLan = document.querySelector('.l-arrow-languages')
+const rightArrowLan = document.querySelector('.r-arrow-languages')
+const languagesChanger = document.querySelector('.languages-changer')
 
 leftArrowLan.onclick = () => {
   indexOfLanguages--
@@ -737,8 +737,8 @@ function addHintImage(mode) {
 let quessedLetters = []
 let isActiveTargetHint = false
 ///////////////////////////////GAMELOOP////////////////////////////////////////////////////////////////
-let start = document.querySelector('.play')
-let startScreen = document.querySelector('.start-screen')
+const start = document.querySelector('.play')
+const startScreen = document.querySelector('.start-screen')
 let randomHint
 let targetHint
 let homeButton
@@ -970,7 +970,7 @@ function endOfGame(label) {
              </div>
             `
   )
-  let showAnswer = document.querySelector('.show-answer')
+  const showAnswer = document.querySelector('.show-answer')
   showAnswer.onclick = () => {
     document.querySelector('.show-answer').remove()
     document.querySelector('.alert-text').innerHTML = `The word was ${word}`
@@ -1086,7 +1086,7 @@ function renderingKeyboard(keyboardLang) {
 }
 
 function addOnClick() {
-  let buttons = document.querySelectorAll('.key')
+  const buttons = document.querySelectorAll('.key')
   buttons.forEach((el) => {
     el.onclick = function () {
       enteredLetter = el.innerText.toLowerCase()
