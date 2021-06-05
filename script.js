@@ -762,12 +762,12 @@ function whichWord(arr) {
 }
 
 function renderingHiddenLetters() {
-  for (let i = 0; i < word.length; i++) {
+  for (let letter of word) {
     setTimeout(function () {
       document
         .querySelector('.hiddenWord')
         .insertAdjacentHTML('afterbegin', `<div class='hiddenLetter'></div>`)
-    }, i * 150)
+    }, letter * 150)
   }
 }
 
@@ -793,7 +793,6 @@ start.onclick = function () {
     if (isActiveTargetHint == true) {
       targetHintActivate()
     } else {
-      //targetHint.style.boxShadow='unset'
       targetHint.style.backgroundColor = 'rgb(241, 209, 69, 0.7)'
 
       letters.forEach((el) => {
@@ -871,7 +870,6 @@ function gameLoop() {
   quessedLetters = []
   isActiveTargetHint = false
   targetHint.style.backgroundColor = 'rgb(241,209,69,0.7)'
-  //targetHint.style.boxShadow='unset'
   targetHint.style.pointerEvents = 'all'
 }
 
@@ -918,13 +916,11 @@ randomWord = (arr) => {
           }
         })()
 
-    word = i[Math.floor(Math.random() * i.length)]
+    word = [...i[Math.floor(Math.random() * i.length)]]
     remainingLetters = word.length
-    console.log(word)
   } else {
-    word = arr[Math.floor(Math.random() * arr.length)]
+    word = [...arr[Math.floor(Math.random() * arr.length)]]
     remainingLetters = word.length
-    console.log(word)
   }
 }
 
@@ -1011,7 +1007,6 @@ function indexOfLetter() {
       if (remainingLetters === 0) {
         document.querySelector('.keyboard').classList.add('blocked')
         endOfGame('Congratulations!You won!')
-        //alert('Ты победил!')
       }
     }
   }
@@ -1179,3 +1174,4 @@ categoriesSelector.forEach((el) => {
     }
   }
 })
+console.log('it works')
