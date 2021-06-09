@@ -1174,4 +1174,3 @@ categoriesSelector.forEach((el) => {
     }
   }
 })
-console.log('it works')
